@@ -39,7 +39,7 @@ const WeatherApp = () => {
 
     setLoading(true);
     try {
-      const response = await fetch(`https://weather-app-ujit.onrender.com/api/weather?city=${encodeURIComponent(city)}`);
+      const response = await fetch(`https://api.weatherapi.com/v1/current.json?key=${apiKey}&q=${city}&aqi=no`);
 
 
       if (!response.ok) throw new Error('City not found');
